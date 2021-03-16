@@ -30,6 +30,22 @@ exports.get_users = async (req, res, next) => {
      res.redirect("/users")
       
     } catch (error) {
-      
+      res.send("An error occured.")
     }
   };
+
+  // On delete request
+
+  exports.delete_user = async (req, res) => {
+    try {
+      await UserModel.destroy({
+        where: {
+          id: req.params.id
+        }
+      })
+     res.redirect("/users")
+
+    } catch (error) {
+        res.send("An error occured.")      
+    }
+  }

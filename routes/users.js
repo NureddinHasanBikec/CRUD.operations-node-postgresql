@@ -8,6 +8,7 @@ router.get('/', usersControllers.get_users);
 router.get('/add', usersControllers.show_add_user_form);
 router.post('/add', usersControllers.add_user);
 
+router.get("/:id/delete", usersControllers.delete_user)
 
 module.exports = router;
 
