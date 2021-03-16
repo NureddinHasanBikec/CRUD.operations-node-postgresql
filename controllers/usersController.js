@@ -13,6 +13,23 @@ exports.get_users = async (req, res, next) => {
   }
   }
 
-  exports.add_user = (req, res) => {
+  // On get request
+
+  exports.show_add_user_form = (req, res) => {
     res.render("addUser")
-  }
+  };
+
+  // On postrequest
+
+  exports.add_user = async (req, res) => {
+    try {
+     const newUser = await UserModel.create({
+       firstName: req.body.firstName,
+       lastName: req.body.lastName
+     })
+     res.redirect("/users")
+      
+    } catch (error) {
+      
+    }
+  };
