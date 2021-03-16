@@ -10,5 +10,8 @@ router.post('/add', usersControllers.add_user);
 
 router.get("/:id/delete", usersControllers.delete_user)
 
+router.get("/:id/:firstName/:lastName/update", usersControllers.show_update_user_form);
+router.post("/:id/update", usersControllers.update_user);
+
 module.exports = router;
 
