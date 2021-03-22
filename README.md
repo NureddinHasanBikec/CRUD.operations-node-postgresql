@@ -14,7 +14,7 @@
   
   |  Show Up  | 
   |-------------------| 
-  |<img src="./visuals/CrudOperations.gif" width="1200" height="800"> |  
+  |<img src="./visuals/CrudOperations.gif" width="1200" height="700"> |  
 
   
 ## Contact
